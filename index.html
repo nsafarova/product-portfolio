@@ -201,49 +201,59 @@
 
     <div class="projects-grid">
 
-      <a href="#" class="project-card">
-        <div class="project-status" style="background:var(--orange)">IN PROGRESS</div>
+      <button type="button" class="project-card" data-project="pm-buddy">
+        <div class="project-status" style="background:var(--orange)">BUILDING NOW</div>
         <div class="project-category">AI / Productivity</div>
         <h3 class="project-name">PM Buddy</h3>
-        <div class="project-subtitle" style="color:var(--orange)">An AI Thinking Partner for Pressure-Testing Feature Ideas</div>
+        <div class="project-subtitle" style="color:var(--orange)">AI Thinking Partner for Feature Validation</div>
         <div class="project-role">Role: Solo Builder</div>
-        <p class="project-blurb">Before scoping any feature, I want structured thinking — who it's for, whether it's worth building, how to validate it cheaply. PM Buddy asks three clarifying questions before it analyzes anything, forcing the same rigor as a real scoping conversation, then tags patterns (like "vanity metric" or "brand mismatch") so they compound across cases instead of piling up as one-offs.</p>
+        <p class="project-blurb">Built for a real, recurring need: before scoping any feature, I want structured thinking — who it's for, whether it's worth building, how to validate it cheaply, what would prove it worked. PM Buddy makes that repeatable.</p>
         <div class="project-link">Read case study →</div>
-      </a>
+      </button>
 
-      <a href="#" class="project-card">
-        <div class="project-status" style="background:var(--blue)">CLASS PROJECT</div>
+      <button type="button" class="project-card" data-project="ironcore">
+        <div class="project-status" style="background:var(--blue)">BEST PROPOSAL</div>
         <div class="project-category">Digital Transformation</div>
         <h3 class="project-name">IronCore Fitness</h3>
         <div class="project-subtitle" style="color:var(--blue)">Digital Transformation Strategy for a Regional Gym Chain</div>
-        <div class="project-role">Role: Lead PM, Team of 4</div>
-        <p class="project-blurb">Led a 4-person team as digital transformation consultants for a 12-location, 18,500-member gym chain fighting 26% annual churn with zero digital infrastructure. Owned the business case and ROI model and drove the interactive prototype. Final proposal projected 306% 3-year ROI and was selected as the class's best proposal.</p>
+        <div class="project-role">Role: Lead PM, Team CTRL+TRANSFORM</div>
+        <p class="project-blurb">Led a 4-person team as digital transformation consultants for a 12-location gym chain with 26% annual churn and zero digital infrastructure. Our proposal was selected as the class's best, earning full marks.</p>
         <div class="project-link">Read case study →</div>
-      </a>
+      </button>
 
-      <a href="#" class="project-card">
-        <div class="project-status" style="background:var(--purple)">SHIPPED · GRADE A</div>
-        <div class="project-category">Product Design + Dev</div>
+      <button type="button" class="project-card" data-project="docpeak">
+        <div class="project-status" style="background:var(--purple)">PAUSED PRE-LAUNCH</div>
+        <div class="project-category">Healthtech</div>
+        <h3 class="project-name">DocPeak</h3>
+        <div class="project-subtitle" style="color:var(--purple)">Queue &amp; Patient Management for Small Clinics</div>
+        <div class="project-role">Role: Co-Founder, Technical PM</div>
+        <p class="project-blurb">A queue and patient management platform I co-founded during COVID, when clinic chaos made the problem impossible to ignore. We discovered our way to the right segment — then ran out of runway before shipping.</p>
+        <div class="project-link">Read case study →</div>
+      </button>
+
+      <button type="button" class="project-card" data-project="grocery">
+        <div class="project-status" style="background:var(--cyan)">SHIPPED · GRADE A</div>
+        <div class="project-category">Consumer App</div>
         <h3 class="project-name">Smart Grocery &amp; Meal Planner</h3>
-        <div class="project-subtitle" style="color:var(--purple)">AI-Assisted MVP, Built From Scratch in One Semester</div>
+        <div class="project-subtitle" style="color:var(--cyan)">AI-Assisted MVP from Scratch</div>
         <div class="project-role">Role: Solo Product Owner &amp; Builder</div>
-        <p class="project-blurb">A personal problem — groceries at home, no idea what to cook — became a full systems-analysis-and-design project: pantry tracking, AI-driven meal suggestions, and auto-built grocery lists. Cut scope from five ambitious features to one clean flow, validated the problem with a 5-person survey first, and shipped a live-demoable MVP with a 178% projected 3-year ROI.</p>
+        <p class="project-blurb">A solo end-to-end MVP built in one semester: tracks pantry inventory, generates AI meal ideas from what's on hand, and auto-builds a grocery list.</p>
         <div class="project-link">Read case study →</div>
-      </a>
-
-      <a href="https://github.com/nsafarova" target="_blank" rel="noopener noreferrer" class="project-card">
-        <div class="project-status" style="background:var(--cyan)">MORE</div>
-        <div class="project-category">GitHub</div>
-        <h3 class="project-name">More on GitHub</h3>
-        <div class="project-subtitle" style="color:var(--cyan)">Other builds, experiments, and code</div>
-        <div class="project-role">Role: —</div>
-        <p class="project-blurb">The three above are the polished case studies — there's more in progress on GitHub if you want to see the rest.</p>
-        <div class="project-link">Visit GitHub →</div>
-      </a>
+      </button>
 
     </div>
   </div>
 </section>
+
+<!-- CASE STUDY MODAL -->
+<div class="modal-overlay" id="caseStudyOverlay" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-scroll" id="modalScroll">
+      <!-- populated by script.js -->
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer id="contact" class="site-footer">
