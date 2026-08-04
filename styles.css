@@ -195,15 +195,16 @@ img { max-width: 100%; display: block; }
   gap: 48px;
 }
 
-.hero-text { position: relative; max-width: 640px; }
+.hero-text { position: relative; max-width: 900px; }
 
 .hero-headline {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(40px, 10vw, 88px);
+  font-size: clamp(30px, 7vw, 88px);
   line-height: 1;
   margin: 0;
   letter-spacing: -1.5px;
+  white-space: nowrap;
 }
 
 .hero-grow {
@@ -292,21 +293,27 @@ img { max-width: 100%; display: block; }
 .hero-card-col {
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  padding: 8px 0 24px;
+  justify-content: center;
+  padding: 48px 0 56px;
+}
+
+.hero-card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
 }
 
 .hero-thats-me {
   display: none;
+  position: absolute;
+  top: -38px;
+  right: 4px;
   font-family: var(--font-hand);
   font-weight: 700;
   font-size: 16px;
-  transform: rotate(-4deg);
-  margin-bottom: 8px;
-  align-self: flex-end;
-  margin-right: 20px;
+  transform: rotate(-6deg);
+  white-space: nowrap;
+  z-index: 4;
 }
 
 .sticky-note {
@@ -320,10 +327,11 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   color: #2a2100;
   text-align: center;
-  margin-bottom: -18px;
-  z-index: 2;
-  position: relative;
-  max-width: 160px;
+  z-index: 3;
+  position: absolute;
+  top: -22px;
+  left: -16px;
+  max-width: 150px;
 }
 
 .name-card {
@@ -333,7 +341,6 @@ img { max-width: 100%; display: block; }
   transform: rotate(3deg);
   box-shadow: 8px 8px 0 var(--ink);
   width: 100%;
-  max-width: 280px;
   position: relative;
   z-index: 1;
 }
@@ -379,9 +386,10 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 0 var(--ink);
-  margin-top: 20px;
-  align-self: flex-start;
-  margin-left: 12px;
+  position: absolute;
+  bottom: -20px;
+  right: -18px;
+  z-index: 2;
 }
 
 @media (min-width: 860px) {
@@ -394,12 +402,9 @@ img { max-width: 100%; display: block; }
   .hero-text { flex: 1 1 auto; padding-right: 40px; }
   .hero-card-col {
     flex: 0 0 300px;
-    align-items: flex-end;
     padding-top: 0;
   }
   .hero-thats-me { display: block; }
-  .sticky-note { align-self: flex-start; margin-left: 10px; }
-  .name-card { margin-top: 8px; }
 }
 
 /* ==========================================================================
