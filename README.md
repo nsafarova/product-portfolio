@@ -46,8 +46,10 @@ Still open:
       to a live demo/repo per project.
 - [ ] **Contact email** — using `nsafarov@cougarnet.uh.edu`. Swap if you'd
       rather use a different address (appears in the footer, twice).
-- [ ] **Resume** — refresh `assets/resume/Nikki_Safarova_Resume.pdf` whenever
-      your resume updates; the nav/hero links point at that exact filename.
+- [ ] **Resume** — the nav/hero Resume buttons link to the resume PDF in
+      Google Drive (shared as "anyone with the link can view"). Upload a new
+      version of that same Drive file when your resume changes so the link
+      stays the same; `assets/resume/` keeps a copy in the repo.
 
 ## Credits / origin
 

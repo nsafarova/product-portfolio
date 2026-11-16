@@ -21,25 +21,27 @@
 (() => {
   const PROJECTS = {
     'pm-buddy': {
-      eyebrow: 'Building now',
+      eyebrow: 'Live',
       category: 'AI / Productivity',
       title: 'PM Buddy',
       subtitle: 'AI Thinking Partner for Feature Validation',
       role: 'Solo Builder',
-      timeline: 'In progress',
-      status: 'Prototype',
+      timeline: '2026 · Live on Vercel',
+      status: 'Live',
       context: "Built for a real, recurring need: before scoping any feature, I want to know who it's for, whether it's worth building, how to validate it cheaply, and what would prove it worked. PM Buddy structures that thinking into a repeatable tool instead of a mental checklist I redo by hand each time.",
       problem: "Build a portfolio showcase, or a tool I'd actually reuse. Those optimize for different things — one for polish, one for volume and pattern recall — so I had to choose the tradeoff rather than default to whichever was easier.",
-      myRole: "Owned the product decisions: scope, the questioning-before-generating flow, the output schema, the tagging taxonomy, the interface. Used Claude to generate code; the calls on what to build and cut were mine.",
+      myRole: "Owned the product decisions: scope, the questioning-before-generating flow, the output schema, the tagging taxonomy, the interface, and the path to a public deployment. Used AI to generate code; the calls on what to build and cut were mine.",
       process: [
-        { heading: 'Narrowing to one repeatable job', body: 'Cut an open-ended "analyze any product" idea after realizing it would sprawl with shallow output. Narrowed to a single repeatable job: validate one feature idea at a time.' },
-        { heading: 'Making the tool ask questions first — on purpose', body: 'The tool asks 3 clarifying questions before analyzing. Forces the same rigor as a real scoping conversation, and doubles as interview rehearsal.' },
-        { heading: 'Shipping, then fixing from real use', body: 'Added an optional live-research toggle so I control when depth is worth the wait. Added pattern tags post-launch (e.g. "brand mismatch," "vanity metric") so repeated use builds pattern recognition across cases. Then found the UX broke my own workflow — form buried, no way back without scrolling — and fixed both from actual use, not speculation.' },
+        { heading: 'Narrowing to one repeatable job', body: 'Cut an open-ended "analyze any product" idea after realizing it would sprawl with shallow output. Narrowed to a single repeatable job: pressure-test one feature idea at a time.' },
+        { heading: 'Making the tool ask questions first — on purpose', body: 'PM Buddy asks 3 clarifying questions before analyzing. Forces the same rigor as a real scoping conversation, and doubles as interview rehearsal.' },
+        { heading: 'A structured case with a verdict', body: 'Every idea comes back as the same structured case: customer segment, value assessment, validation approach, metrics, prioritization, and a clear verdict — Build, Validate further, or Don\'t build. Pattern tags (e.g. "brand mismatch," "vanity metric") make recurring issues visible across ideas.' },
+        { heading: 'Closing the gap to a public link', body: 'The prototype ran only in a sandbox, with no safe way to hold an API key. I moved the model call into a small Vercel serverless function so the key never reaches the browser, switched to Google Gemini\'s free tier with automatic model fallback when it\'s busy, and kept cases in the browser\'s localStorage — keeping it free to run without adding a database.' },
       ],
-      outcome: 'Working prototype, not yet public. Runs client-side on the Claude API; I use it for my own feature validation and interview prep. No backend or persistent storage yet — that\'s the gap before a real deployed link.',
-      learning: "Two things, named honestly. First: I defaulted toward the impressive-demo version before deliberately choosing the reusable-tool version. Right call, but it means this stays a living entry, not a fixed case study. Second: shipping needs two unsolved pieces — a backend to hold the API key securely, and real storage to replace the sandbox-only layer it runs on now.",
+      outcome: 'Shipped and publicly usable: anyone can open PM Buddy, enter a feature idea, answer three questions, and get a structured validation case with a verdict. I use it for my own feature validation and interview prep.',
+      learning: "Two things, named honestly. First: I defaulted toward the impressive-demo version before deliberately choosing the reusable-tool version — the right call, and it means this stays a living entry. Second: \"shipping\" was mostly unglamorous infrastructure decisions — where the key lives, what it costs to run, what happens when the free tier is busy — and those tradeoffs shaped the product as much as the prompts did.",
       screenshot: null,
-      link: null,
+      link: 'https://pm-buddy-app.vercel.app/',
+      linkLabel: 'Try PM Buddy live →',
     },
     'ironcore': {
       eyebrow: 'Selected Best Proposal',
@@ -166,7 +168,7 @@
         <p>${escapeHtml(project.learning)}</p>
       </div>
       ${project.link ? `
-        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="modal-link-btn">View project / prototype →</a>
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="modal-link-btn">${escapeHtml(project.linkLabel || 'View project / prototype →')}</a>
       ` : ''}
     `;
   }

@@ -900,3 +900,5 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+.story-body + .story-body { margin-top: 12px; }
