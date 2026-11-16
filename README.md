@@ -25,6 +25,11 @@ then open `http://localhost:8080`.
 
 ## Deploy
 
+The site is live in two places, both auto-deploying from `main`:
+
+- GitHub Pages: https://nsafarova.github.io/product-portfolio (linked from resumes — keep it on)
+- Vercel: https://nikki-safarova-portfolio.vercel.app
+
 **GitHub Pages** — push this repo to GitHub, then in Settings → Pages set the
 source to the `main` branch (root). No build step needed.
 
